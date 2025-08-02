@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Holi jsjs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .header {
+            background-color: #ffc0cb;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+        }
+
+        .message-card {
+            background-color: #ffe6f0;
+            border: none;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-love {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+        }
+
+        .btn-love:hover {
+            background-color: #ff85c1;
+        }
+
+        .extra-message {
+            margin-top: 1rem;
+            background-color: #ffc0cb;
+            color: white;
+            padding: 1rem;
+            border-radius: 1rem;
+            font-weight: bold;
+            display: none;
+            transition: opacity 0.3s ease;
+        }
+
+        @media (max-width: 576px) {
+            .extra-message {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>¡Feliz Día de la Novia!</h1>
+        <p>Un pequeño detalle solo para ti 💖</p>
+    </div>
+
+    <!-- Mensaje especial -->
+    <div class="container my-5">
+        <div class="message-card text-center">
+            <h2 class="mb-3">Eres mi persona favorita</h2>
+            <p class="lead">
+            <p class="lead">
+                Desde el primer día que te vi, algo en mí cambió. quizás fue tu sonrisa, tu forma de hablar, o
+                simplemente esa energía tuya que me atrapó al instante. Desde ese momento supe que eras diferente,
+                especial y única. Cada día que pasa, me sigo maravillando por todo lo que eres. No hay nada que valore
+                más que tenerte a mi lado. Amo
+                tus
+                locuras jsjsj, tu paciencia, tu ternura, amo cada cosa de tí. Eres mi hogar, mi lugar seguro, y sin
+                duda, lo mejor que me ha pasado. 💖
+            </p>
+
+            </p>
+            <p>Te amo más de lo que las palabras pueden expresar.</p>
+            <button class="btn btn-love mt-3" onclick="mostrarMensajeAleatorio()">💌 Mensajitos</button>
+
+            <div id="mensajeOculto" class="extra-message"></div>
+        </div>
+    </div>
+
+    <footer class="text-center text-muted py-4">
+        Con mucho amor, Kristian 💗
+    </footer>
+
+    <script>
+        const mensajes = [
+            "No hay un solo día en el que no piense en ti 💗",
+            "Eres la razón por la que sonrío siempre 🥰",
+            "Contigo todo es más bonito ✨",
+            "Tenerte es un regalo que valoro cada día 🎁",
+            "Gracias por estar en mi vida 💞",
+            "Eres mi paz, mi alegría, mi todo 💘",
+            "Cada momento contigo es un tesoro 💎",
+            "Amo tus caritas jsjsjs 💕",
+            "Desde el primer día vi algo especial en ti 🌸"
+        ];
+
+        function mostrarMensajeAleatorio() {
+            const mensaje = mensajes[Math.floor(Math.random() * mensajes.length)];
+            const contenedor = document.getElementById("mensajeOculto");
+            contenedor.textContent = mensaje;
+            contenedor.style.display = "block";
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
